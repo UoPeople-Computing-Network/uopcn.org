@@ -1,0 +1,75 @@
+/* Base colors from logo */
+:root {
+  --bg-dark: #0b1d2d;
+  --primary: #4da5a9;
+  --secondary: #71cfd3;
+  --text-glow: rgba(77, 165, 169, 0.6);
+  --card-bg: rgba(255, 255, 255, 0.03);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--primary);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px var(--text-glow);
+  max-width: 500px;
+  width: 100%;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px var(--primary));
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+/* Animated loader */
+.loader {
+  border: 4px solid var(--primary);
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  font-size: 0.9em;
+  color: var(--secondary);
+}
